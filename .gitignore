@@ -1,0 +1,24 @@
+# Ambientes virtuais
+venv/
+.venv/
+
+# Variáveis de ambiente
+.env
+
+# Cache Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Banco SQLite antigo
+*.sqlite3
+
+# Logs
+*.log
+
+# Traduções Django compiladas
+*.mo
+*.pot
+
+# Migrations (se quiser ignorar as locais)
+**/migrations/
