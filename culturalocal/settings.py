@@ -94,6 +94,10 @@ CORS_ALLOWED_ORIGINS = [
     "https://cultura-backend-riqt.onrender.com", 
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://cultura-backend-riqt.onrender.com",
+]
+
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
