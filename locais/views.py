@@ -61,7 +61,7 @@ class LocalImagemAdminViewSet(viewsets.ModelViewSet):
                 f.write(chunk)
 
         url = upload_imagem_supabase(temp_path, nome_no_bucket)
-        serializer.save(local_id=local_id, arquivo_url=url)
+        serializer.save(local_id=local_id, arquivo=url)
 
 
 class LocalCulturalAdminViewSet(viewsets.ModelViewSet):

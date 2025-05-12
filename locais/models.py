@@ -54,7 +54,7 @@ class LocalCultural(models.Model):
     
 class LocalImagem(models.Model):
     local = models.ForeignKey(LocalCultural, related_name="imagens", on_delete=models.CASCADE)
-    arquivo_url = models.URLField(max_length=500)  # Agora é URL
+    arquivo = models.URLField(max_length=500)  # Agora é URL
     legenda = models.CharField(max_length=140, blank=True)
 
     def __str__(self):
