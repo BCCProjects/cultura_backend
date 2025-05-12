@@ -29,6 +29,9 @@ SECRET_KEY = 'django-insecure-t_@)m!a3r4#-laue%%20jt*pst@x^kd!#btzgptkzl8co*9=96
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+WHITENOISE_ADD_HEADERS_FUNCTION = 'config.utils.set_cors_headers'
+
+
 ALLOWED_HOSTS = [
     "https://311d-200-233-154-1.ngrok-free.app",
     "311d-200-233-154-1.ngrok-free.app",
