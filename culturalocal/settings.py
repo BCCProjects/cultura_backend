@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-t_@)m!a3r4#-laue%%20jt*pst@x^kd!#btzgptkzl8co*9=96'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 WHITENOISE_ADD_HEADERS_FUNCTION = 'config.utils.set_cors_headers'
 
