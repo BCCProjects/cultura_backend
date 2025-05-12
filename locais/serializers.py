@@ -18,8 +18,7 @@ class CidadeSerializer(serializers.ModelSerializer):
 class LocalImagemSerializer(serializers.ModelSerializer):
     class Meta:
         model = LocalImagem
-        fields = ("id", "arquivo", "legenda")
-
+        fields = ("id", "arquivo_url", "legenda")
 
 class LocalCulturalSerializer(serializers.ModelSerializer):
     imagens = LocalImagemSerializer(many=True, read_only=True)

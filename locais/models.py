@@ -53,18 +53,11 @@ class LocalCultural(models.Model):
         return self.nome
     
 class LocalImagem(models.Model):
-    """
-    Uma imagem pertencente a um local cultural.
-    """
-    local = models.ForeignKey(
-        LocalCultural,
-        related_name="imagens",
-        on_delete=models.CASCADE,
-    )
-    arquivo = models.ImageField(upload_to="locais/galeria/")
+    local = models.ForeignKey(LocalCultural, related_name="imagens", on_delete=models.CASCADE)
+    arquivo_url = models.URLField(max_length=500)  # Agora é URL
     legenda = models.CharField(max_length=140, blank=True)
 
     def __str__(self):
-        return f"{self.local.nome} – {self.legenda or 'imagem'}"    
-    
+        return f"{self.local.nome} – {self.legenda or 'imagem'}"
+
 
