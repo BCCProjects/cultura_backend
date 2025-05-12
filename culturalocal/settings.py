@@ -38,7 +38,7 @@ ALLOWED_HOSTS = [
     "http://127.0.0.1:8000", 
     "127.0.0.1", 
     "localhost", 
-    "cultura-backend-riqt.onrender.com",
+    "cultura-backend-79gw.onrender.com",
 ]
 
 
@@ -94,11 +94,11 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8001",
     "https://311d-200-233-154-1.ngrok-free.app", 
     "http://127.0.0.1:8000", 
-    "https://cultura-backend-riqt.onrender.com", 
+    "https://cultura-backend-79gw.onrender.com", 
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://cultura-backend-riqt.onrender.com",
+    "https://cultura-backend-79gw.onrender.com",
 ]
 
 MEDIA_URL = "/media/"
