@@ -3,12 +3,15 @@ import os
 from supabase import create_client, Client
 
 SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY")  # use a chave de serviço
+SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
 BUCKET_NAME = os.getenv("SUPABASE_BUCKET", "media")
 
-supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
-
 def upload_imagem_supabase(caminho_arquivo, nome_no_bucket):
+    if not SUPABASE_URL or not SUPABASE_KEY:
+        raise RuntimeError("Variáveis de ambiente do Supabase não estão configuradas")
+
+    supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+
     with open(caminho_arquivo, "rb") as f:
         supabase.storage.from_(BUCKET_NAME).upload(file=f, path=nome_no_bucket, upsert=True)
 
