@@ -22,3 +22,5 @@ __pycache__/
 
 # Migrations (se quiser ignorar as locais)
 **/migrations/
+
+/media

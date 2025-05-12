@@ -18,4 +18,7 @@ RUN pip install --upgrade pip \
 
 COPY . .
 
-CMD ["sh", "-c", "python manage.py migrate --noinput && python manage.py collectstatic --noinput && python manage.py runserver 0.0.0.0:8000"]
+RUN python manage.py collectstatic --noinput
+
+CMD ["sh", "-c", "python manage.py migrate --noinput && python manage.py runserver 0.0.0.0:8000"]
+
