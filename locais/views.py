@@ -17,8 +17,8 @@ class LocalCulturalViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = LocalCulturalSerializer
     permission_classes = (permissions.AllowAny,)
     filter_backends = (DjangoFilterBackend, filters.SearchFilter)
-    search_fields   = ['nome']                 # <– busca só pelo nome
-    filterset_fields = ['cidade', 'cidade__estado']  # mantém filtros exatos
+    search_fields   = ['nome']                
+    filterset_fields = ['tipo','cidade', 'cidade__estado']  
 
 
 class EstadoViewSet(viewsets.ReadOnlyModelViewSet):
